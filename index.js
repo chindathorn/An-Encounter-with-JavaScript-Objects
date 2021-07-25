@@ -5,6 +5,19 @@ import "./style.css";
 const appDiv = document.getElementById("app");
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
+console.log(this === window);
+
+const anObject = {
+  value: 0,
+  checkThis() {
+    console.log(this);
+    (function doIt() {
+      console.log(this);
+    })()
+  }  
+}
+anObject.checkThis();
+
 console.log("1------------------------------------------");
 // Object creation
 const obj = {
